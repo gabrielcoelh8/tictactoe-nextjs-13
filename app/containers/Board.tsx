@@ -63,7 +63,7 @@ function Board() {
         if (!w && !squares.filter((square) => !square).length) {
           setWinner('Both');
         }
-      });
+      }, [squares]);
 
     return (
         <div className="text-center my-6">
