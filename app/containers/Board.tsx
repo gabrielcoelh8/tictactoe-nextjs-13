@@ -67,7 +67,7 @@ function Board() {
 
     return (
         <div className="text-center my-6">
-            {!winner && <p className="text-2xl font-bold">Hey {!currentPlayer ? <span className="loading loading-spinner text-sky-400"></span> : currentPlayer}, it's your turn!</p>}
+            {!winner && <p className="text-2xl font-bold">Hey {!currentPlayer ? <span className="loading loading-spinner text-sky-400"></span> : currentPlayer}, its your turn!</p>}
             
             {winner && winner !== "Both" && <p className="text-2xl font-bold">Congrats {winner}!</p>}
 
