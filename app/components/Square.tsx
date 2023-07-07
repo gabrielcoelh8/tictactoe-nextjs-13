@@ -1,4 +1,4 @@
-type Player = "X" | "O" | null
+type Player = "X" | "O" | "Both" | null
 
 interface squareProps {
   value: Player, 
