@@ -1,24 +1,25 @@
 type Player = "X" | "O" | null
 
 interface squareProps {
-  value: string | null, 
+  value: Player, 
   onClick: () => void, 
-  winner: string | null
+  winner: Player
 }
 
 const Square: React.FC<squareProps> = ({ value, onClick, winner }) => {
-
   if(!value){
-    return <button className="btn" disabled={ Boolean(winner) }>
-      Square
+    return (
+    <button onClick={onClick} className="btn btn-block btn-primary btn-square" disabled={ Boolean(winner) }>
+    {value}
     </button>
+    )
   }
   
   return (
-    <button className={`btn square_${value.toLocaleLowerCase}`} disabled>
-      Square</button>
+    <button className={`btn btn-block btn-primary btn-square btn-outline square_${value.toLowerCase}`} disabled>
+    {value}
+    </button>
   )
-  
 }
 
 export default Square
